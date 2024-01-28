@@ -1,5 +1,7 @@
+#include <stdbool.h>
 #include <stdio.h>
 
+#include <SDL.h>
 #include <SDL_mixer.h>
 
 int main(int argc, char *argv[])
@@ -25,7 +27,7 @@ int main(int argc, char *argv[])
 	m = Mix_LoadMUS(argv[1]);
 	if (m == NULL)
 	{
-		printf("Failed to load music from file %s\n", argv[1]);
+		printf("Failed to load music from file %s: %s\n", argv[1], SDL_GetError());
 		goto bail;
 	}
 

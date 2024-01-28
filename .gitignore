@@ -54,3 +54,11 @@ dkms.conf
 # CMake
 CMakeCache.txt
 CMakeFiles/
+build/
+CMakeScripts/
+cmake_install.cmake
+*.xcodeproj/
+Debug/
+
+# macOS
+.DS_Store
